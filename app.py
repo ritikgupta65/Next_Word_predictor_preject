@@ -44,6 +44,7 @@ def submit():
        
 
     output = text 
+    
     return render_template('index.html', prediction_text=f'Prediction: {output}')
 
 if __name__ == "__main__":
