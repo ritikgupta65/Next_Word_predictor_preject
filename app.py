@@ -35,7 +35,7 @@ def submit():
         # next_word = reverse_word_index.get(next_word_index)
     
       
-        # if next_word:
+        #if next_word:
         #  text += " " + next_word 
    
         for word,index in tokenizer.word_index.items():
