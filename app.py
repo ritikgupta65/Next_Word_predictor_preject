@@ -42,7 +42,7 @@ def submit():
           if index == next_word_index:
             text = text + " " + word
        
-    # Output the final predicted text
+
     output = text 
     return render_template('index.html', prediction_text=f'Prediction: {output}')
 
