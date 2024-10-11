@@ -36,7 +36,7 @@ def submit():
     
       
         # if next_word:
-        #    text += " " + next_word 
+        #   text += " " + next_word 
    
         for word,index in tokenizer.word_index.items():
           if index == next_word_index:
