@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Next Word Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .form-container {
+           margin-top: 190px;
+           margin-left: 400px;
+            max-width: 500px;
+            /* margi; */
+            padding: 20px;
+            border: 3px solid #5b5e5f;
+            border-radius: 10px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #e70707;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color:rgb(237, 232, 224);
+        }
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid green;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 1.5em;
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 20px;
+        }
+        body::before {
+            content: '';
+             position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; 
+            background-image: url('https://images.unsplash.com/photo-1620969427101-7a2bb6d83273?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7; 
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Next Word Predictor</h2>
+        <form action="/submit" method="post">
+
+            <label for="text">start ot write : </label>
+            <input type="text" step="0.01" name="text" required>
+
+            <label for = "no_of_words">select no. of words to suggest</label>
+            <select name = "no_of_words" id = "no_of_words">
+                <option value = "1" selected>1</option>
+                <option value = "2" selected>2</option>
+                <option value = "3" selected>3</option>
+                <option value = "4" selected>4</option>
+                <option value = "5" selected>5</option>
+                <option value = "6" selected>6</option>
+                <option value = "7" selected>7</option>
+                <option value = "8" selected>8</option>
+                <option value = "9" selected>9</option>
+                <option value = "10" selected>10</option>
+                          
+               
+            </select>
+   <br>
+   <br>
+            <input type="submit" value="submit">
+        </form>
+        {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
